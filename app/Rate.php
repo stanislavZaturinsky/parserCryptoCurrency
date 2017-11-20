@@ -33,8 +33,13 @@ class Rate extends Model
 
     /**
      * @param $data \stdClass
+     * @return bool
      */
     public static function store($data) {
+        if (!is_object($data)) {
+            return false;
+        }
+
         $rate = new Rate;
         if (isset($data->{Rate::CURRENCY_USD})) {
             $rate->usd = $data->{Rate::CURRENCY_USD}->last;
@@ -48,5 +53,6 @@ class Rate extends Model
             $rate->gbp = $data->{Rate::CURRENCY_GBP}->last;
         }
         $rate->save();
+        return true;
     }
 }

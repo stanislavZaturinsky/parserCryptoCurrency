@@ -37,13 +37,11 @@ class ParseRates extends Command
     public function handle()
     {
         $start = microtime(true);
-        $data = Rate::parse();
+        $data  = Rate::parse();
         Rate::store($data);
-        //\Carbon\Carbon::now()
-        $spentTime = microtime(true) - $start;
         \Log::info(null,  [
             'provider'     => env('CURRENCY_PROVIDER'),
-            'time_execute' => $spentTime
+            'time_execute' => microtime(true) - $start
         ]);
     }
 }
