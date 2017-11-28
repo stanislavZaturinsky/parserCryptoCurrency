@@ -5,4 +5,4 @@
 - add to configuration file .env - CURRENCY_PROVIDER='https://blockchain.info/ticker'
 - php artisan migrate
 - run in console: * * * * * php /path-to-your-project/artisan schedule:run >> /dev/null 2>&1
-- check work =)
+- check parsing result in main page

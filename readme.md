@@ -1,3 +1,7 @@
+## About project
+This project can do parsing crypto currency by cron every minute, file install.md contains information
+how to install project and start parsing. 
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
